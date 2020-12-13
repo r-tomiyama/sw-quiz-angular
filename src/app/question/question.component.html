@@ -1,0 +1,16 @@
+<div>
+  <h2>【Q{{ index }}】{{ question.id }}: {{ question.text }}</h2>
+  <div>
+    <form>
+      <label>
+        回答：
+        <select value="{{ answer }}" (change)="onChange($event)">
+          <option *ngFor="let option of question.options; index as index" value="{{ option }}">
+            {{ option }}
+          </option>
+        </select>
+        <p>{{ changeResult() }}</p>
+      </label>
+    </form>
+  </div>
+</div>

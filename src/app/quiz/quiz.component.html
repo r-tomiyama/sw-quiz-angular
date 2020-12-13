@@ -1,0 +1,11 @@
+<h2>スターウォーズのクイズです</h2>
+<p>{{ numOfQuestions }}問中 {{ numOfRights }} 問正解</p>
+<div *ngFor="let question of questions; index as index">
+  <app-question
+    [index]="index + 1"
+    [question]="question"
+    [answer]="results[question.id].answer"
+    [isRight]="results[question.id].isRight"
+    (handleChange)="onHandleChange($event)"
+  ></app-question>
+</div>
