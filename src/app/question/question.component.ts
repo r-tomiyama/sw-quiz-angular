@@ -20,6 +20,7 @@ export class QuestionComponent implements OnInit {
   ngOnInit(): void {}
 
   onChange($event: Readonly<Event>) {
+    console.log('hoge')
     this.handleChange.emit({
       id: this.question.id,
       // eslint-disable-next-line @typescript-eslint/no-explicit-any

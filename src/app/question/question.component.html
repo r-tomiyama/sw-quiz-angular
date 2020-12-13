@@ -1,6 +1,8 @@
-<div>
-  <h2>【Q{{ index }}】{{ question.id }}: {{ question.text }}</h2>
-  <div>
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title>【Q{{ index }}】{{ question.id }}: {{ question.text }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
     <form>
       <label>
         回答：
@@ -9,8 +11,8 @@
             {{ option }}
           </option>
         </select>
-        <p>{{ changeResult() }}</p>
       </label>
     </form>
-  </div>
-</div>
+    <p>{{ changeResult() }}</p>
+  </mat-card-content>
+</mat-card>
